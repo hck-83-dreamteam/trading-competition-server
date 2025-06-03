@@ -3,7 +3,6 @@ const { comparePassword } = require("../helpers/bcrypt");
 const { signToken } = require("../helpers/jwt");
 
 module.exports = class UserController {
-<<<<<<< HEAD
   static async login(req, res) {
     try {
       const { email, password } = req.body;
@@ -39,7 +38,8 @@ module.exports = class UserController {
       } else {
         res.status(500).json({ message: "Internal server error" });
       }
-=======
+    }
+  }
   static async register(req, res) {
     try {
       const { email, password, username, fullName } = req.body;
@@ -105,7 +105,6 @@ module.exports = class UserController {
           message: "An error occurred during registration",
         },
       });
->>>>>>> feat/register
     }
   }
 };
